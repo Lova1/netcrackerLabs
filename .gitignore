@@ -1,5 +1,7 @@
 .idea/*
 
+README.md
+
 	*.war
 	*.jar
 	*.ear
