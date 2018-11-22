@@ -1,6 +1,6 @@
 .idea/*
-
-README.md
+.target/*
+.netcrackerLabs/README.md
 
 	*.war
 	*.jar
