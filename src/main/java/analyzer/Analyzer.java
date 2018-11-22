@@ -1,11 +1,11 @@
-package baselab01.analyzer;
+package analyzer;
 
 
-import baselab01.fillers.Fillers;
-import baselab01.package01.BubbleSort;
-import baselab01.package02.QuicksortSort;
-import baselab01.package03.MyArrays;
-import baselab01.package04.ByHalf;
+import fillers.Fillers;
+import package01.BubbleSort;
+import package02.QuicksortSort;
+import package03.MyArrays;
+import package04.ByHalf;
 
 public class Analyzer {
 

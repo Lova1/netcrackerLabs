@@ -1,6 +1,6 @@
-package baselab01.fillers;
+package fillers;
 
-import baselab01.package01.BubbleSort;
+import package01.BubbleSort;
 import java.lang.Exception;
 import java.util.Arrays;
 import java.util.Random;

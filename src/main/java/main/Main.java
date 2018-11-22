@@ -1,11 +1,11 @@
-package baselab01.main;
+package main;
 
-import baselab01.analyzer.Analyzer;
-import baselab01.fillers.Fillers;
-import baselab01.output.OutputResult;
-import baselab01.package01.BubbleSort;
-import baselab01.package02.QuicksortSort;
-import baselab01.package04.ByHalf;
+import analyzer.Analyzer;
+import fillers.Fillers;
+import output.OutputResult;
+import package01.BubbleSort;
+import package02.QuicksortSort;
+import package04.ByHalf;
 
 
 public class Main {

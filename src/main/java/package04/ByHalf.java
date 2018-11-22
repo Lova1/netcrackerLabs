@@ -1,8 +1,8 @@
-package baselab01.package04;
+package package04;
 
-import baselab01.package01.BubbleSort;
-import baselab01.package02.QuicksortSort;
-import baselab01.package03.MyArrays;
+import package01.BubbleSort;
+import package02.QuicksortSort;
+import package03.MyArrays;
 
 import java.util.Arrays;
 

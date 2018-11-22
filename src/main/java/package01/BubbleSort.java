@@ -1,4 +1,4 @@
-package baselab01.package01;
+package package01;
 
 public class BubbleSort {
 

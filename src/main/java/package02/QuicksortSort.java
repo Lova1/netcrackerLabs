@@ -1,4 +1,4 @@
-package baselab01.package02;
+package package02;
 
 public class QuicksortSort {
 

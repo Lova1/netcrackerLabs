@@ -1,4 +1,4 @@
-package baselab01.package03;
+package package03;
 
 import java.util.Arrays;
 

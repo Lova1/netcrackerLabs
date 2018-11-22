@@ -1,10 +1,10 @@
-package baselab01.output;
+package output;
 
-import baselab01.fillers.Fillers;
-import baselab01.package01.BubbleSort;
-import baselab01.package03.MyArrays;
-import baselab01.package04.ByHalf;
-import baselab01.package02.QuicksortSort;
+import fillers.Fillers;
+import package01.BubbleSort;
+import package03.MyArrays;
+import package04.ByHalf;
+import package02.QuicksortSort;
 
 public class OutputResult {
 
