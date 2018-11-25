@@ -1,3 +1,4 @@
+/*
 package output;
 
 import fillers.Fillers;
@@ -99,3 +100,4 @@ public class OutputResult {
             System.out.println("------------------------------------------------------------------");
     }
 }
+*/
