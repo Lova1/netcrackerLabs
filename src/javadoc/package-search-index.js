@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"abstractbubblesorter"},{"l":"abstractbyhaldsorter"},{"l":"abstractsorter"},{"l":"All Packages","url":"allpackages-index.html"},{"l":"bubblesort"},{"l":"byhalf"},{"l":"fillers"},{"l":"main"},{"l":"myarrays"},{"l":"qsort"},{"l":"timeinterface"}]
