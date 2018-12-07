@@ -1,7 +1,12 @@
 package myreflection;
 
+import abstractsorter.AbstractSorter;
+import interfacepackage.annotation.MethodSortAnnotation;
+import org.reflections.Reflections;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.util.Set;
 
 /**
  * @author Lova Vardanian
@@ -21,14 +26,14 @@ public class MyReflection {
         Class clazz = object.getClass();
         Method[] methods = clazz.getDeclaredMethods();
         for (Method method : methods) {
-            Annotation[] annotations = method.getDeclaredAnnotations();
-            for (Annotation annotation : annotations) {
-               // Annotation msa = method.getAnnotation(MethodSortAnnotation.class);
-               //       if(annotation.equals(msa))
-                System.out.println(object.getClass() + " " + method.getName() + " : " + annotation);
+            //Annotation[] annotations = method.getDeclaredAnnotations();
+            //for (Annotation annotation : annotations) {
+                Annotation annotation = method.getAnnotation(MethodSortAnnotation.class);
+                      if(annotation != null)
+                        System.out.println(object.getClass() + " " + method.getName() + " : " + annotation);
             }
         }
-    }
+
 
     /**
      *Method for finding annotate class
@@ -47,9 +52,11 @@ public class MyReflection {
      */
     public static void getSuperClass (Object object) {
 
-        Class clazz = object.getClass();
-        Class sclass = clazz.getSuperclass();
-        System.out.println(sclass.toString());
+        //Class clazz = object.getClass();
+        //Class sclass = clazz.getSuperclass();
+        Reflections reflections = new Reflections();
+        Set<Class<? extends AbstractSorter>> subTypes = reflections.getSubTypesOf(AbstractSorter.class);
+        //System.out.println(sclass.toString());
     }
 
 

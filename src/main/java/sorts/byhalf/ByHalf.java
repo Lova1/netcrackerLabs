@@ -66,7 +66,6 @@ import java.util.Arrays;
 
             int fRange = 0;
             int sRange = 0;
-            int[] finalArr = new int[inputArray.length];
 
             int[] firstArray;
             int[] secondArray;
@@ -79,22 +78,22 @@ import java.util.Arrays;
             bs.sort(secondArray);
 
             int ii = 0;
-            while (ii != finalArr.length) {
+            while (ii != inputArray.length) {
 
                 if (firstArray.length == fRange) {
-                    finalArr[ii] = secondArray[sRange];
+                    inputArray[ii] = secondArray[sRange];
                     ii++;
                     sRange++;
                 } else if (secondArray.length == sRange) {
-                    finalArr[ii] = firstArray[fRange];
+                    inputArray[ii] = firstArray[fRange];
                     ii++;
                     fRange++;
                 } else if (firstArray[fRange] <= secondArray[sRange]) {
-                    finalArr[ii] = firstArray[fRange];
+                    inputArray[ii] = firstArray[fRange];
                     fRange++;
                     ii++;
                 } else {
-                    finalArr[ii] = secondArray[sRange];
+                    inputArray[ii] = secondArray[sRange];
                     sRange++;
                     ii++;
                 }
@@ -106,7 +105,7 @@ import java.util.Arrays;
                 System.out.println("Time is less than zero. Variable overflow !");
 
             System.out.print("sort: [ ");
-            arrPrint(finalArr);
+            arrPrint(inputArray);
             System.out.println("]");
 
         } else {
@@ -135,7 +134,6 @@ import java.util.Arrays;
 
             int fRange = 0;
             int sRange = 0;
-            int[] finalArr = new int[inputArray.length];
 
             int[] firstArray;
             int[] secondArray;
@@ -148,22 +146,22 @@ import java.util.Arrays;
             qsort.sort(secondArray);
 
             int ii = 0;
-            while (ii != finalArr.length) {
+            while (ii != inputArray.length) {
 
                 if (firstArray.length == fRange) {
-                    finalArr[ii] = secondArray[sRange];
+                    inputArray[ii] = secondArray[sRange];
                     ii++;
                     sRange++;
                 } else if (secondArray.length == sRange) {
-                    finalArr[ii] = firstArray[fRange];
+                    inputArray[ii] = firstArray[fRange];
                     ii++;
                     fRange++;
                 } else if (firstArray[fRange] <= secondArray[sRange]) {
-                    finalArr[ii] = firstArray[fRange];
+                    inputArray[ii] = firstArray[fRange];
                     fRange++;
                     ii++;
                 } else {
-                    finalArr[ii] = secondArray[sRange];
+                    inputArray[ii] = secondArray[sRange];
                     sRange++;
                     ii++;
                 }
@@ -175,7 +173,7 @@ import java.util.Arrays;
                 System.out.println("Time is less than zero. Variable overflow !");
 
             System.out.print("qsort: [ ");
-            arrPrint(finalArr);
+            arrPrint(inputArray);
             System.out.println("]");
 
         } else {
@@ -204,7 +202,6 @@ import java.util.Arrays;
 
             int fRange = 0;
             int sRange = 0;
-            int[] finalArr = new int[inputArray.length];
 
             int[] firstArray;
             int[] secondArray;
@@ -217,22 +214,22 @@ import java.util.Arrays;
             myArrays.sort(secondArray);
 
             int ii = 0;
-            while (ii != finalArr.length) {
+            while (ii != inputArray.length) {
 
                 if (firstArray.length == fRange) {
-                    finalArr[ii] = secondArray[sRange];
+                    inputArray[ii] = secondArray[sRange];
                     ii++;
                     sRange++;
                 } else if (secondArray.length == sRange) {
-                    finalArr[ii] = firstArray[fRange];
+                    inputArray[ii] = firstArray[fRange];
                     ii++;
                     fRange++;
                 } else if (firstArray[fRange] <= secondArray[sRange]) {
-                    finalArr[ii] = firstArray[fRange];
+                    inputArray[ii] = firstArray[fRange];
                     fRange++;
                     ii++;
                 } else {
-                    finalArr[ii] = secondArray[sRange];
+                    inputArray[ii] = secondArray[sRange];
                     sRange++;
                     ii++;
                 }
@@ -244,7 +241,7 @@ import java.util.Arrays;
                 System.out.println("Time is less than zero. Variable overflow !");
 
             System.out.print("arraysSort: [ ");
-            arrPrint(finalArr);
+            arrPrint(inputArray);
             System.out.println("]");
 
         } else {
@@ -273,7 +270,6 @@ import java.util.Arrays;
 
             int fRange = 0;
             int sRange = 0;
-            int[] finalArr = new int[inputArray.length];
 
             int[] firstArray;
             int[] secondArray;
@@ -286,22 +282,22 @@ import java.util.Arrays;
             bs.reverseSort(secondArray);
 
             int ii = 0;
-            while (ii != finalArr.length) {
+            while (ii != inputArray.length) {
 
                 if (firstArray.length == fRange) {
-                    finalArr[ii] = secondArray[sRange];
+                    inputArray[ii] = secondArray[sRange];
                     ii++;
                     sRange++;
                 } else if (secondArray.length == sRange) {
-                    finalArr[ii] = firstArray[fRange];
+                    inputArray[ii] = firstArray[fRange];
                     ii++;
                     fRange++;
                 } else if (firstArray[fRange] <= secondArray[sRange]) {
-                    finalArr[ii] = firstArray[fRange];
+                    inputArray[ii] = firstArray[fRange];
                     fRange++;
                     ii++;
                 } else {
-                    finalArr[ii] = secondArray[sRange];
+                    inputArray[ii] = secondArray[sRange];
                     sRange++;
                     ii++;
                 }
@@ -313,7 +309,7 @@ import java.util.Arrays;
                 System.out.println("Time is less than zero. Variable overflow !");
 
             System.out.print("reverseSort: [ ");
-            arrPrint(finalArr);
+            arrPrint(inputArray);
             System.out.println("]");
 
         } else {

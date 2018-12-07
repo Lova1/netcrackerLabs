@@ -7,6 +7,8 @@ import sorts.bubblesort.BubbleSort;
 import sorts.byhalf.ByHalf;
 import sorts.qsort.Qsort;
 
+import java.util.Arrays;
+
 public class Analyzer {
 
     public static void analyze(){
@@ -14,12 +16,17 @@ public class Analyzer {
         int as = 10;
         final int[] a;
 
-        //a = Fillers.randLastElement(as);
+        a = Fillers.randLastElement(as);
 
         BubbleSort q = new BubbleSort();
         //q.sort(a);
         //q.getTime();
         //System.out.println("\n");
+
+        ByHalf qsort = new ByHalf();
+        qsort.qsort(a);
+
+        System.out.println(Arrays.toString(a));
 
         MyReflection.getSuperClass(q);
         //MyReflection.getAnnotatedMethods(q);

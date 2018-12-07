@@ -1,6 +1,5 @@
 package fillers;
 
-import fillers.Fillers;
 import org.junit.*;
 import org.junit.rules.Timeout;
 
@@ -8,9 +7,6 @@ import static org.junit.Assert.*;
 
 
 public class FillersTest {
-
-    Fillers fillers = new Fillers();
-
 
     int arrSize;
     int [] arr;

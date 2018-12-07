@@ -31,7 +31,6 @@ public class ByHalfTest {
     public void sort() {
 
         byHalf.sort(arr);
-
         assertArrayEquals(sortedArr,arr);
     }
 
@@ -39,7 +38,6 @@ public class ByHalfTest {
     public void qsort() {
 
         byHalf.qsort(arr);
-
         assertArrayEquals(sortedArr,arr);
     }
 
@@ -47,7 +45,6 @@ public class ByHalfTest {
     public void arraysSort() {
 
         byHalf.arraysSort(arr);
-
         assertArrayEquals(sortedArr,arr);
     }
 
@@ -55,7 +52,6 @@ public class ByHalfTest {
     public void reverseSort() {
 
         byHalf.reverseSort(arr);
-
         assertArrayEquals(sortedArr,arr);
     }
 }
