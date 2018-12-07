@@ -1,6 +1,8 @@
-package qsort;
+package sorts.qsort;
 
 import abstractsorter.AbstractSorter;
+import interfacepackage.annotation.ClassSortAnnotation;
+import interfacepackage.annotation.MethodSortAnnotation;
 import timeinterface.Time;
 
 /**
@@ -15,7 +17,8 @@ import timeinterface.Time;
  */
 
 //todo checks for null
-public class Qsort extends AbstractSorter implements Time {
+        @ClassSortAnnotation
+    public class Qsort extends AbstractSorter implements Time {
 
     /**
      * @param time Parameter that save time of method that has been started/stopped
@@ -44,6 +47,7 @@ public class Qsort extends AbstractSorter implements Time {
      * Method that sort by calling isort method that include the main logic of sort
      */
     @Override
+    @MethodSortAnnotation
     public void sort(int[] inputArray) {
 
         if (inputArray.length > 0) {

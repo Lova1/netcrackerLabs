@@ -1,6 +1,8 @@
-package bubblesort;
+package sorts.bubblesort;
 
 import abstractbubblesorter.AbstractBubbleSorter;
+import interfacepackage.annotation.ClassSortAnnotation;
+import interfacepackage.annotation.MethodSortAnnotation;
 import timeinterface.Time;
 
 /**
@@ -15,7 +17,8 @@ import timeinterface.Time;
  */
 
 //todo checks for null
-public class BubbleSort extends AbstractBubbleSorter implements Time {
+        @ClassSortAnnotation
+    public class BubbleSort extends AbstractBubbleSorter implements Time {
 
     /**
      * @param time is parameter that save time of method that has been started/stopped
@@ -52,7 +55,9 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
      *      }
      * </pre>
      */
+
     @Override
+    @MethodSortAnnotation
     public void sort(int[] inputArray){
 
         if (inputArray.length != 0) {
@@ -112,6 +117,14 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
         }
     }
 
+
+
+
+
+
+
+
+
     /**
      * Method that sort using such algorithm
      * <pre>
@@ -124,7 +137,9 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
      *      }
      * </pre>
      */
+
     @Override
+    @MethodSortAnnotation
     public void reverseSort(int[] inputArray){
 
         if (inputArray.length != 0) {
