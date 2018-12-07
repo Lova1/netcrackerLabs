@@ -1,9 +1,11 @@
-package byhalf;
+package sorts.byhalf;
 
 import abstractbyhaldsorter.AbstractByHalfSorter;
-import bubblesort.BubbleSort;
-import myarrays.MyArrays;
-import qsort.Qsort;
+import interfacepackage.annotation.ClassSortAnnotation;
+import interfacepackage.annotation.MethodSortAnnotation;
+import sorts.bubblesort.BubbleSort;
+import sorts.myarrays.MyArrays;
+import sorts.qsort.Qsort;
 import timeinterface.Time;
 import java.util.Arrays;
 
@@ -18,7 +20,8 @@ import java.util.Arrays;
  */
 
 //todo checks for null
-public class ByHalf extends AbstractByHalfSorter implements Time {
+        @ClassSortAnnotation
+    public class ByHalf extends AbstractByHalfSorter implements Time {
 
     /**
      * @param time is parameter that save time of method that has been started/stopped
@@ -47,7 +50,9 @@ public class ByHalf extends AbstractByHalfSorter implements Time {
      * Method that divide input array by two parts and sort it by using {@link BubbleSort#sort(int[])}
      * @see BubbleSort BubbleSort class
      */
+
     @Override
+    @MethodSortAnnotation
     public void sort(int[] inputArray) {
 
         if (inputArray.length != 0) {
@@ -116,6 +121,7 @@ public class ByHalf extends AbstractByHalfSorter implements Time {
      * @see Qsort Qsort class
      */
     @Override
+    @MethodSortAnnotation
     public void qsort(int[] inputArray) {
 
         if (inputArray.length != 0) {
@@ -184,6 +190,7 @@ public class ByHalf extends AbstractByHalfSorter implements Time {
      * @see MyArrays MyArrays class
      */
     @Override
+    @MethodSortAnnotation
     public void arraysSort(int[] inputArray) {
 
         if (inputArray.length != 0) {
@@ -252,6 +259,7 @@ public class ByHalf extends AbstractByHalfSorter implements Time {
      * @see BubbleSort BubbleSort class
      */
     @Override
+    @MethodSortAnnotation
     public void reverseSort(int[] inputArray) {
 
         if (inputArray.length != 0) {
