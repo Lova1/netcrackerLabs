@@ -11,8 +11,8 @@ import static org.junit.Assert.*;
 public class ByHalfTest {
 
     ByHalf byHalf = new ByHalf();
-    int [] sortedArr = { 0, 1, 2, 2, 3, 5, 7, 9, 11, 22};
-    int [] arr = { 3, 2, 11, 1, 0, 7, 22, 5, 9, 2};
+    int[] sortedArr = {0, 1, 2, 2, 3, 5, 7, 9, 11, 22};
+    int[] arr = {3, 2, 11, 1, 0, 7, 22, 5, 9, 2};
 
     @Before
     public void setUp() {
@@ -31,27 +31,27 @@ public class ByHalfTest {
     public void sort() {
 
         byHalf.sort(arr);
-        assertArrayEquals(sortedArr,arr);
+        assertArrayEquals(sortedArr, arr);
     }
 
     @Test
     public void qsort() {
 
         byHalf.qsort(arr);
-        assertArrayEquals(sortedArr,arr);
+        assertArrayEquals(sortedArr, arr);
     }
 
     @Test
     public void arraysSort() {
 
         byHalf.arraysSort(arr);
-        assertArrayEquals(sortedArr,arr);
+        assertArrayEquals(sortedArr, arr);
     }
 
     @Test
     public void reverseSort() {
 
         byHalf.reverseSort(arr);
-        assertArrayEquals(sortedArr,arr);
+        assertArrayEquals(sortedArr, arr);
     }
 }

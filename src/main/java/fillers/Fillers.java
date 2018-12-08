@@ -11,10 +11,10 @@ import java.util.Random;
  * @since 1.0
  * <p>
  * This is an <strong>static</strong> class that create 4 different type of arrays
- *</p>
+ * </p>
  */
-        @ClassFillersAnnotation
-    public class Fillers {
+@ClassFillersAnnotation
+public class Fillers {
 
     /**
      * Private array that store filled array after one of method has been finished
@@ -23,9 +23,10 @@ import java.util.Random;
 
     /**
      * Set value to privateArray
+     *
      * @param arr An input array from one of Fillers method
      */
-    private static void setPrivateArray(int[] arr, int arrSize){
+    private static void setPrivateArray(int[] arr, int arrSize) {
 
         privateArray = new int[arr.length];
 
@@ -35,7 +36,8 @@ import java.util.Random;
 
     /**
      * Set value with the help of Math.random and sort it by Arrays.sort
-     * @param arr An input array from one of Fillers method
+     *
+     * @param arr     An input array from one of Fillers method
      * @param arrSize Array size
      */
 
@@ -45,15 +47,15 @@ import java.util.Random;
         final int FROM_POSITIVE_RANGE = 300;
         final int FROM_NEGATIVE_RANDE = 100;
 
-        arr[0] = (int)Math.round((Math.random() * FROM_POSITIVE_RANGE) - FROM_NEGATIVE_RANDE);
+        arr[0] = (int) Math.round((Math.random() * FROM_POSITIVE_RANGE) - FROM_NEGATIVE_RANDE);
 
         for (int i = 1; i < arrSize; i++) {
 
             checker = (int) Math.round((Math.random() * FROM_POSITIVE_RANGE) - FROM_NEGATIVE_RANDE);
 
-            if( checker > 0 )
+            if (checker > 0)
                 arr[i] = arr[i - 1] + checker;
-             else
+            else
                 arr[i] = arr[i - 1] - checker;
         }
         return arr;
@@ -62,13 +64,14 @@ import java.util.Random;
     /**
      * This is <strong>static</strong> method that create sorted array
      * that return link for privateArray that contained array with
+     *
      * @param arrSize Array size
      */
 
-            @MethodFillersAnnotation
-        public static int[] sort(int arrSize) {
+    @MethodFillersAnnotation
+    public static int[] sort(int arrSize) {
 
-        if(arrSize > 0) {
+        if (arrSize > 0) {
             int[] arr = new int[arrSize];
 
             setAndSortRandValue(arr, arrSize);
@@ -89,12 +92,13 @@ import java.util.Random;
     /**
      * This is <strong>static</strong> method that create sorted array with random last element
      * that return link for privateArray that contained array with
+     *
      * @param arrSize Array size
      */
-            @MethodFillersAnnotation
-        public static int[] randLastElement (int arrSize) {
+    @MethodFillersAnnotation
+    public static int[] randLastElement(int arrSize) {
 
-        if(arrSize > 0) {
+        if (arrSize > 0) {
             int[] arr = new int[arrSize];
             setAndSortRandValue(arr, arrSize);
 
@@ -118,12 +122,13 @@ import java.util.Random;
     /**
      * This is <strong>static</strong> method that create reverse sorted array
      * that return link for privateArray that contained array with
+     *
      * @param arrSize Array size
      */
-            @MethodFillersAnnotation
-        public static int[] reverseSort (int arrSize) {
+    @MethodFillersAnnotation
+    public static int[] reverseSort(int arrSize) {
 
-        if(arrSize > 0) {
+        if (arrSize > 0) {
             int[] arr = new int[arrSize];
             int[] resultArr = new int[arrSize];
             int plus1 = 0;
@@ -143,7 +148,7 @@ import java.util.Random;
 
             setPrivateArray(resultArr, arrSize);
             return privateArray;
-        }else {
+        } else {
             System.out.println("Array size should be greater than 0");
             return new int[0];
         }
@@ -153,12 +158,13 @@ import java.util.Random;
     /**
      * This is <strong>static</strong> method that create random array
      * that return link for privateArray that contained array with
+     *
      * @param arrSize Array size
      */
-            @MethodFillersAnnotation
-        public static int[] randArray(int arrSize){
+    @MethodFillersAnnotation
+    public static int[] randArray(int arrSize) {
 
-        if(arrSize > 0) {
+        if (arrSize > 0) {
             int[] arr = new int[arrSize];
 
             for (int i = 1; i < arrSize; i++) {
@@ -172,7 +178,7 @@ import java.util.Random;
 
             setPrivateArray(arr, arrSize);
             return privateArray;
-        }else {
+        } else {
             System.out.println("Array size should be greater than 0");
             return new int[0];
         }

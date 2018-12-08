@@ -8,11 +8,11 @@ import java.lang.annotation.*;
  * @since 1.1
  * <p>
  * This is an annotation for mark Fillers class
- *</p>
+ * </p>
  */
 
-@Target(value= ElementType.METHOD)
-@Retention(value= RetentionPolicy.RUNTIME)
+@Target(value = ElementType.METHOD)
+@Retention(value = RetentionPolicy.RUNTIME)
 public @interface MethodFillersAnnotation {
 
 }

@@ -8,12 +8,12 @@ import java.lang.annotation.*;
  * @since 1.1
  * <p>
  * This is an annotation for mark Fillers class
- *</p>
+ * </p>
  */
 
 //@Inherited
-@Target(value=ElementType.TYPE)
-@Retention(value= RetentionPolicy.RUNTIME)
+@Target(value = ElementType.TYPE)
+@Retention(value = RetentionPolicy.RUNTIME)
 public @interface ClassFillersAnnotation {
 
 }

@@ -13,8 +13,8 @@ public class BubbleSortTest {
 
     BubbleSort bubbleSort = new BubbleSort();
 
-    int [] sortedArr = { 0, 1, 2, 2, 3, 5, 7, 9, 11, 22};
-    int [] arr = { 3, 2, 11, 1, 0, 7, 22, 5, 9, 2};
+    int[] sortedArr = {0, 1, 2, 2, 3, 5, 7, 9, 11, 22};
+    int[] arr = {3, 2, 11, 1, 0, 7, 22, 5, 9, 2};
 
 
     @Before
@@ -34,7 +34,7 @@ public class BubbleSortTest {
     public void sort() {
 
         bubbleSort.sort(arr);
-        assertArrayEquals(sortedArr,arr);
+        assertArrayEquals(sortedArr, arr);
 
     }
 
@@ -42,7 +42,7 @@ public class BubbleSortTest {
     public void reverseSort() {
 
         bubbleSort.reverseSort(arr);
-        assertArrayEquals(sortedArr,arr);
+        assertArrayEquals(sortedArr, arr);
 
     }
 }

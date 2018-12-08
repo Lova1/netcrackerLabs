@@ -1,24 +1,20 @@
 package analyzer;
 
-import abstractsorter.AbstractSorter;
 import fillers.Fillers;
 import myreflection.MyReflection;
-import sorts.bubblesort.BubbleSort;
 import sorts.byhalf.ByHalf;
 import sorts.qsort.Qsort;
 
-import java.util.Arrays;
-
 public class Analyzer {
 
-    public static void analyze(){
+    public static void analyze() {
 
         int as = 10;
         final int[] a;
 
         a = Fillers.randLastElement(as);
 
-        BubbleSort q = new BubbleSort();
+        Qsort q = new Qsort();
         //q.sort(a);
         //q.getTime();
         //System.out.println("\n");
@@ -26,9 +22,8 @@ public class Analyzer {
         ByHalf qsort = new ByHalf();
         qsort.qsort(a);
 
-        System.out.println(Arrays.toString(a));
-
-        MyReflection.getSuperClass(q);
+        //MyReflection.getSortAnnotatedClasses(q);
+        MyReflection.getClassesExtendsAbstractSorter(qsort);
         //MyReflection.getAnnotatedMethods(q);
 
 /*

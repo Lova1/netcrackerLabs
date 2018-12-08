@@ -1,6 +1,9 @@
 package myreflection;
 
 import abstractsorter.AbstractSorter;
+import interfacepackage.annotation.ClassFillersAnnotation;
+import interfacepackage.annotation.ClassSortAnnotation;
+import interfacepackage.annotation.MethodFillersAnnotation;
 import interfacepackage.annotation.MethodSortAnnotation;
 import org.reflections.Reflections;
 
@@ -18,47 +21,98 @@ import java.util.Set;
 public class MyReflection {
 
     /**
-     *Method for finding annotate methods
+     * Method for finding annotate by MethodSortAnnotation annotation methods
+     *
      * @param object Input class References
      */
-    public static void getAnnotatedMethods (Object object) {
+    public static void getSortAnnotatedMethods(Object object) {
 
         Class clazz = object.getClass();
         Method[] methods = clazz.getDeclaredMethods();
         for (Method method : methods) {
-            //Annotation[] annotations = method.getDeclaredAnnotations();
-            //for (Annotation annotation : annotations) {
-                Annotation annotation = method.getAnnotation(MethodSortAnnotation.class);
-                      if(annotation != null)
-                        System.out.println(object.getClass() + " " + method.getName() + " : " + annotation);
-            }
+            Annotation annotation = method.getAnnotation(MethodSortAnnotation.class);
+            System.out.println(object.getClass() + " " + method.getName() + " : " + annotation);
         }
-
+    }
 
     /**
-     *Method for finding annotate class
+     * Method for finding annotate by MethodFillersAnnotation annotation methods
+     *
      * @param object Input class References
      */
-    public static void getAnnotatedClass (Object object) {
+    public static void getFillersAnnotatedMethods(Object object) {
 
         Class clazz = object.getClass();
-        Annotation[] annotations = clazz.getAnnotations();
-        System.out.println(clazz + " : " + annotations);
+        Method[] methods = clazz.getDeclaredMethods();
+        for (Method method : methods) {
+            Annotation annotation = method.getAnnotation(MethodFillersAnnotation.class);
+            System.out.println(object.getClass() + " " + method.getName() + " : " + annotation);
+        }
     }
 
     /**
-     *Method for finding SuperClass
+     * Method for finding SortAnnotatedClasses
+     *
      * @param object Input class References
      */
-    public static void getSuperClass (Object object) {
+    public static void getSortAnnotatedClasses(Object object) {
 
-        //Class clazz = object.getClass();
-        //Class sclass = clazz.getSuperclass();
-        Reflections reflections = new Reflections();
-        Set<Class<? extends AbstractSorter>> subTypes = reflections.getSubTypesOf(AbstractSorter.class);
-        //System.out.println(sclass.toString());
+        Class clazz = object.getClass();
+        Reflections reflections = new Reflections(clazz);
+
+        //Finds by annotation
+        Set<Class<?>> annotateds = reflections.getTypesAnnotatedWith(ClassSortAnnotation.class);
+
+        if (!annotateds.isEmpty()) {
+
+            System.out.println("annotated.isEmpty = " + annotateds.isEmpty());
+            for (Class<?> annotated : annotateds) {
+                System.out.println(annotated.getName());
+            }
+        }
     }
 
+    /**
+     * Method for finding FillerAnnotatedClasses
+     *
+     * @param object Input class References
+     */
+    public static void getFillerAnnotatedClasses(Object object) {
+
+        Class clazz = object.getClass();
+        Reflections reflections = new Reflections(clazz);
+
+        Set<Class<?>> annotateds = reflections.getTypesAnnotatedWith(ClassFillersAnnotation.class);
+
+        if (!annotateds.isEmpty()) {
+
+            System.out.println("annotated.isEmpty = " + annotateds.isEmpty());
+            for (Class<?> annotated : annotateds) {
+                System.out.println(annotated.getName());
+            }
+        }
+    }
+
+    /**
+     * Method for finding classes that extends AbstractSorter
+     *
+     * @param object Input class References
+     */
+    public static void getClassesExtendsAbstractSorter(Object object) {
+
+        Class clazz = object.getClass();
+        Reflections reflections = new Reflections(clazz);
+
+        Set<Class<? extends AbstractSorter>> subTypes = reflections.getSubTypesOf(AbstractSorter.class);
+
+        if (!subTypes.isEmpty()) {
+
+            System.out.println("annotated.isEmpty = " + subTypes.isEmpty());
+            for (Class<? extends AbstractSorter> abstractSorter : subTypes) {
+                System.out.println(abstractSorter.getName());
+            }
+        }
+    }
 
 }
 

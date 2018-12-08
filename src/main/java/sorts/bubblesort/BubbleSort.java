@@ -8,17 +8,17 @@ import timeinterface.Time;
 /**
  * @author Lova Vardanian
  * @version 1.1
- * @since 1.1
  * @throws NullPointerException if input value is null
  * <p>
  * This is an class that extends {@link AbstractBubbleSorter#sort(int[])}
  * also this class implements {@link Time#getTime()}
- *</p>
+ * </p>
+ * @since 1.1
  */
 
 //todo checks for null
-        @ClassSortAnnotation
-    public class BubbleSort extends AbstractBubbleSorter implements Time {
+@ClassSortAnnotation
+public class BubbleSort extends AbstractBubbleSorter implements Time {
 
     /**
      * @param time is parameter that save time of method that has been started/stopped
@@ -58,12 +58,12 @@ import timeinterface.Time;
 
     @Override
     @MethodSortAnnotation
-    public void sort(int[] inputArray){
+    public void sort(int[] inputArray) {
 
         if (inputArray.length != 0) {
 
             startTime = 0;
-            startTime  = System.nanoTime();
+            startTime = System.nanoTime();
 
             int[] arr = inputArray;
 
@@ -100,7 +100,7 @@ import timeinterface.Time;
                 }
             }
 
-            if ( System.nanoTime() - startTime > 0 )
+            if (System.nanoTime() - startTime > 0)
                 time = System.nanoTime() - startTime;
             else
                 System.out.println("Time is less than zero. Variable overflow !");
@@ -109,20 +109,13 @@ import timeinterface.Time;
             arrPrint(inputArray);
             System.out.println("]");
 
-        }else {
+        } else {
 
             System.out.println("Array is Empty");
             startTime = 0;
             return;
         }
     }
-
-
-
-
-
-
-
 
 
     /**
@@ -140,12 +133,12 @@ import timeinterface.Time;
 
     @Override
     @MethodSortAnnotation
-    public void reverseSort(int[] inputArray){
+    public void reverseSort(int[] inputArray) {
 
         if (inputArray.length != 0) {
 
             startTime = 0;
-            startTime  = System.nanoTime();
+            startTime = System.nanoTime();
 
             int[] arr = inputArray;
 
@@ -156,7 +149,7 @@ import timeinterface.Time;
             System.out.println("]");
 
             for (int j = arr.length - 1; j > 0; j--) {
-                for (int i = arr.length - 1; i > 0; i--){
+                for (int i = arr.length - 1; i > 0; i--) {
 
                     //todo uncomment for full steps changing in the array
                     //Полностю пошаговый вывод массива на каждом шагу
@@ -166,7 +159,8 @@ import timeinterface.Time;
                     for (int n = 0; n < ar.length; n++)
                         System.out.print(arr[n] + " ");
 
-       */             if (arr[i] < arr[i - 1]) {
+       */
+                    if (arr[i] < arr[i - 1]) {
                         int temp = arr[i - 1];
                         arr[i - 1] = arr[i];
                         arr[i] = temp;
@@ -182,7 +176,7 @@ import timeinterface.Time;
                 }
             }
 
-            if ( System.nanoTime() - startTime > 0 )
+            if (System.nanoTime() - startTime > 0)
                 time = System.nanoTime() - startTime;
             else
                 System.out.println("Time is less than zero. Variable overflow !");
@@ -191,7 +185,7 @@ import timeinterface.Time;
             arrPrint(inputArray);
             System.out.println("]");
 
-        }else {
+        } else {
 
             System.out.print("Array is Empty");
             startTime = 0;

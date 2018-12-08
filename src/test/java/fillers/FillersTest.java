@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class FillersTest {
 
     int arrSize;
-    int [] arr;
+    int[] arr;
 
     @Rule
     public Timeout timeout = new Timeout(100);

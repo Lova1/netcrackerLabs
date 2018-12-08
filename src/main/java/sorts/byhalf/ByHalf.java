@@ -7,21 +7,22 @@ import sorts.bubblesort.BubbleSort;
 import sorts.myarrays.MyArrays;
 import sorts.qsort.Qsort;
 import timeinterface.Time;
+
 import java.util.Arrays;
 
 /**
  * @author Lova Vardanian
  * @version 1.1
- * @since 1.1
  * @throws NullPointerException if input value is null
  * <p>
  * also this class implements {@link Time#getTime()}
- *</p>
+ * </p>
+ * @since 1.1
  */
 
 //todo checks for null
-        @ClassSortAnnotation
-    public class ByHalf extends AbstractByHalfSorter implements Time {
+@ClassSortAnnotation
+public class ByHalf extends AbstractByHalfSorter implements Time {
 
     /**
      * @param time is parameter that save time of method that has been started/stopped
@@ -48,6 +49,7 @@ import java.util.Arrays;
 
     /**
      * Method that divide input array by two parts and sort it by using {@link BubbleSort#sort(int[])}
+     *
      * @see BubbleSort BubbleSort class
      */
 
@@ -58,7 +60,7 @@ import java.util.Arrays;
         if (inputArray.length != 0) {
 
             startTime = 0;
-            startTime  = System.nanoTime();
+            startTime = System.nanoTime();
 
             System.out.print("Input Array is equal to [ ");
             arrPrint(inputArray);
@@ -70,8 +72,8 @@ import java.util.Arrays;
             int[] firstArray;
             int[] secondArray;
 
-            firstArray = Arrays.copyOfRange(inputArray, 0,inputArray.length / 2);
-            secondArray = Arrays.copyOfRange(inputArray, inputArray.length/2, inputArray.length);
+            firstArray = Arrays.copyOfRange(inputArray, 0, inputArray.length / 2);
+            secondArray = Arrays.copyOfRange(inputArray, inputArray.length / 2, inputArray.length);
 
             BubbleSort bs = new BubbleSort();
             bs.sort(firstArray);
@@ -99,7 +101,7 @@ import java.util.Arrays;
                 }
             }
 
-            if ( System.nanoTime() - startTime > 0 )
+            if (System.nanoTime() - startTime > 0)
                 time = System.nanoTime() - startTime;
             else
                 System.out.println("Time is less than zero. Variable overflow !");
@@ -117,6 +119,7 @@ import java.util.Arrays;
 
     /**
      * Method that divide input array by two parts and sort it by using {@link Qsort#sort(int[])}
+     *
      * @see Qsort Qsort class
      */
     @Override
@@ -126,7 +129,7 @@ import java.util.Arrays;
         if (inputArray.length != 0) {
 
             startTime = 0;
-            startTime  = System.nanoTime();
+            startTime = System.nanoTime();
 
             System.out.print("Input Array is equal to [ ");
             arrPrint(inputArray);
@@ -138,10 +141,10 @@ import java.util.Arrays;
             int[] firstArray;
             int[] secondArray;
 
-            firstArray = Arrays.copyOfRange(inputArray, 0,inputArray.length / 2);
-            secondArray = Arrays.copyOfRange(inputArray, inputArray.length/2, inputArray.length);
+            firstArray = Arrays.copyOfRange(inputArray, 0, inputArray.length / 2);
+            secondArray = Arrays.copyOfRange(inputArray, inputArray.length / 2, inputArray.length);
 
-            Qsort qsort= new Qsort();
+            Qsort qsort = new Qsort();
             qsort.sort(firstArray);
             qsort.sort(secondArray);
 
@@ -167,7 +170,7 @@ import java.util.Arrays;
                 }
             }
 
-            if ( System.nanoTime() - startTime > 0 )
+            if (System.nanoTime() - startTime > 0)
                 time = System.nanoTime() - startTime;
             else
                 System.out.println("Time is less than zero. Variable overflow !");
@@ -185,6 +188,7 @@ import java.util.Arrays;
 
     /**
      * Method that divide input array by two parts and sort it by using {@link MyArrays#sort(int[])}
+     *
      * @see MyArrays MyArrays class
      */
     @Override
@@ -194,7 +198,7 @@ import java.util.Arrays;
         if (inputArray.length != 0) {
 
             startTime = 0;
-            startTime  = System.nanoTime();
+            startTime = System.nanoTime();
 
             System.out.print("Input Array is equal to [ ");
             arrPrint(inputArray);
@@ -206,8 +210,8 @@ import java.util.Arrays;
             int[] firstArray;
             int[] secondArray;
 
-            firstArray = Arrays.copyOfRange(inputArray, 0,inputArray.length / 2);
-            secondArray = Arrays.copyOfRange(inputArray, inputArray.length/2, inputArray.length);
+            firstArray = Arrays.copyOfRange(inputArray, 0, inputArray.length / 2);
+            secondArray = Arrays.copyOfRange(inputArray, inputArray.length / 2, inputArray.length);
 
             MyArrays myArrays = new MyArrays();
             myArrays.sort(firstArray);
@@ -235,7 +239,7 @@ import java.util.Arrays;
                 }
             }
 
-            if ( System.nanoTime() - startTime > 0 )
+            if (System.nanoTime() - startTime > 0)
                 time = System.nanoTime() - startTime;
             else
                 System.out.println("Time is less than zero. Variable overflow !");
@@ -253,6 +257,7 @@ import java.util.Arrays;
 
     /**
      * Method that divide input array by two parts and sort it by using {@link BubbleSort#sort(int[])}
+     *
      * @see BubbleSort BubbleSort class
      */
     @Override
@@ -262,7 +267,7 @@ import java.util.Arrays;
         if (inputArray.length != 0) {
 
             startTime = 0;
-            startTime  = System.nanoTime();
+            startTime = System.nanoTime();
 
             System.out.print("Input Array is equal to [ ");
             arrPrint(inputArray);
@@ -274,8 +279,8 @@ import java.util.Arrays;
             int[] firstArray;
             int[] secondArray;
 
-            firstArray = Arrays.copyOfRange(inputArray, 0,inputArray.length / 2);
-            secondArray = Arrays.copyOfRange(inputArray, inputArray.length/2, inputArray.length);
+            firstArray = Arrays.copyOfRange(inputArray, 0, inputArray.length / 2);
+            secondArray = Arrays.copyOfRange(inputArray, inputArray.length / 2, inputArray.length);
 
             BubbleSort bs = new BubbleSort();
             bs.reverseSort(firstArray);
@@ -303,7 +308,7 @@ import java.util.Arrays;
                 }
             }
 
-            if ( System.nanoTime() - startTime > 0 )
+            if (System.nanoTime() - startTime > 0)
                 time = System.nanoTime() - startTime;
             else
                 System.out.println("Time is less than zero. Variable overflow !");

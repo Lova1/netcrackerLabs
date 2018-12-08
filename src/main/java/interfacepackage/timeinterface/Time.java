@@ -6,7 +6,7 @@ package timeinterface;
  * @since 1.1
  * <p>
  * This is an interface with only one method getTime
- *</p>
+ * </p>
  */
 public interface Time {
 

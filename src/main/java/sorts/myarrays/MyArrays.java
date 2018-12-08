@@ -10,17 +10,17 @@ import java.util.Arrays;
 /**
  * @author Lova Vardanian
  * @version 1.1
- * @since 1.1
  * @throws NullPointerException if input value is null
  * <p>
  * This is an class that extends {@link AbstractSorter#sort(int[])}
  * also this class implements {@link Time#getTime()}
- *</p>
+ * </p>
+ * @since 1.1
  */
 
 //todo checks for null
-        @ClassSortAnnotation
-    public class MyArrays extends AbstractSorter implements Time {
+@ClassSortAnnotation
+public class MyArrays extends AbstractSorter implements Time {
 
     /**
      * @param time is parameter that save time of method that has been started/stopped
@@ -46,8 +46,10 @@ import java.util.Arrays;
     }
 
     //todo @see java.util.Arrays java.util.Arrays to not create the link
+
     /**
      * Method that sort by calling Array.sort method from java.util.Arrays.sort package
+     *
      * @see java.util.Arrays java.util.Arrays
      */
 

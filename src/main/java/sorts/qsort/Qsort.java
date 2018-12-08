@@ -8,17 +8,17 @@ import timeinterface.Time;
 /**
  * @author Lova Vardanian
  * @version 1.1
- * @since 1.1
  * @throws NullPointerException if input value is null
  * <p>
  * This is an class that extends {@link AbstractSorter#sort(int[])}
  * also this class implements {@link Time#getTime()}
- *</p>
+ * </p>
+ * @since 1.1
  */
 
 //todo checks for null
-        @ClassSortAnnotation
-    public class Qsort extends AbstractSorter implements Time {
+@ClassSortAnnotation
+public class Qsort extends AbstractSorter implements Time {
 
     /**
      * @param time Parameter that save time of method that has been started/stopped
@@ -76,7 +76,8 @@ import timeinterface.Time;
 
     /**
      * Method that sort by calling recursion if low < high
-     * @param low Is the right part of subarray
+     *
+     * @param low  Is the right part of subarray
      * @param high Is the left part of subarray
      */
     int[] isort(int[] arr, int low, int high) {
@@ -96,6 +97,7 @@ import timeinterface.Time;
 
     /**
      * Method that work with partition element by setting pivot element and swap array elements
+     *
      * @param arr Input array
      */
     int partition(int arr[], int low, int high) {
