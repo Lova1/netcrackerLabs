@@ -1,9 +1,13 @@
 package analyzer;
 
 import fillers.Fillers;
-import myreflection.MyReflection;
+import sorts.bubblesort.BubbleSort;
 import sorts.byhalf.ByHalf;
 import sorts.qsort.Qsort;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class Analyzer {
 
@@ -14,16 +18,29 @@ public class Analyzer {
 
         a = Fillers.randLastElement(as);
 
-        Qsort q = new Qsort();
+        SortNSizeArray sortNSizeArray = new SortNSizeArray();
+        sortNSizeArray.sortRandArray(1_000);
+        sortNSizeArray.sortRandLastElementArray(1);
+        sortNSizeArray.sortReversArray(10);
+        sortNSizeArray.sortSortedArray(100);
+
+
+        Map<String, Map> generalTimes = sortNSizeArray.getGeneralTimesMap();
+        if (!(generalTimes.isEmpty())) {
+            System.out.println("---------------------------------------------------------------------------------------");
+            System.out.println("generalTimesMap" + generalTimes.get("randArrayMap"));
+            System.out.println("reversArrayMap" + generalTimes.get("reversArrayMap"));
+            System.out.println("randLastElementMap" + generalTimes.get("randLastElementMap"));
+            System.out.println("sortedMap" + generalTimes.get("sortedMap"));
+        }
+
+        //Qsort q = new Qsort();
         //q.sort(a);
         //q.getTime();
         //System.out.println("\n");
 
-        ByHalf qsort = new ByHalf();
-        qsort.qsort(a);
-
         //MyReflection.getSortAnnotatedClasses(q);
-        MyReflection.getClassesExtendsAbstractSorter(qsort);
+        //MyReflection.getClassesExtendsAbstractSorter(qsort);
         //MyReflection.getAnnotatedMethods(q);
 
 /*
@@ -60,5 +77,6 @@ public class Analyzer {
         System.out.println("\n");
         byHalf.getTime();*/
     }
+
 }
 

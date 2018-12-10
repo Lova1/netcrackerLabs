@@ -13,6 +13,6 @@ public interface Time {
     /**
      * @return non negative int number
      */
-    void getTime();
+    long getTime();
 
 }

@@ -31,8 +31,9 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
      * Return measured time
      */
     @Override
-    public void getTime() {
-        System.out.print("Time is " + time);
+    public long getTime() {
+        //System.out.print("Time is " + time);
+        return time;
     }
 
     /**
@@ -67,11 +68,11 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
 
             int[] arr = inputArray;
 
-            System.out.print("Current array from BubbleSort.sort [ ");
-            for (int i = 0; i < inputArray.length; i++)
-                System.out.print(arr[i] + " ");
-
-            System.out.println("]");
+//            System.out.print("Current array from BubbleSort.sort [ ");
+//            for (int i = 0; i < inputArray.length; i++)
+//                System.out.print(arr[i] + " ");
+//
+//            System.out.println("]");
 
             for (int j = 0; j < arr.length - 1; j++) {
                 for (int i = 0; i < arr.length - 1; i++) {

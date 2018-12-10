@@ -109,7 +109,7 @@ public class MyReflection {
 
             System.out.println("annotated.isEmpty = " + subTypes.isEmpty());
             for (Class<? extends AbstractSorter> abstractSorter : subTypes) {
-                System.out.println(abstractSorter.getName());
+                System.out.println(abstractSorter.getName() + "\n" + "Superclass :" + abstractSorter.getSuperclass());
             }
         }
     }

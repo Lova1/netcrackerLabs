@@ -31,8 +31,9 @@ public class Qsort extends AbstractSorter implements Time {
      * Return measured time
      */
     @Override
-    public void getTime() {
-        System.out.print("Time is " + time);
+    public long getTime() {
+        //System.out.print("Time is " + time);
+        return time;
     }
 
     /**

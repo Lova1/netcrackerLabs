@@ -76,6 +76,8 @@ public class Fillers {
 
             setAndSortRandValue(arr, arrSize);
 
+            //Output sorted array
+
 //            System.out.print("Fillers sort [ ");
 //            for (int i = 0; i < arrSize; i++)
 //                System.out.print(arr[i] + " ");
@@ -104,6 +106,8 @@ public class Fillers {
 
             Random rand = new Random();
             arr[arrSize - 1] = rand.nextInt(50);
+
+            //Output sorted array with random last element
 
 //            System.out.print("Fillers randLastElement [ ");
 //            for (int i = 0; i < arrSize; i++)
@@ -141,6 +145,8 @@ public class Fillers {
                 plus1++;
             }
 
+            //Output reverse sorted array
+
 //            System.out.print("Fillers reverseSort [ ");
 //            for (int i = 0; i < arrSize; i++)
 //                System.out.print(resultArr[i] + " ");
@@ -170,6 +176,8 @@ public class Fillers {
             for (int i = 1; i < arrSize; i++) {
                 arr[i] = (int) Math.round((Math.random() * 300/*fromRenge*/) - 100/*toRange*/);
             }
+
+            //Output random array
 
 //            System.out.print("Fillers randArray [ ");
 //            for (int i = 0; i < arrSize; i++)
