@@ -33,7 +33,7 @@ public class MyArrays extends AbstractSorter implements Time {
      * Return measured time
      */
     @Override
-    public long getTime() {
+    public double getTime() {
         //System.out.print("Time is " + time);
         return time;
     }

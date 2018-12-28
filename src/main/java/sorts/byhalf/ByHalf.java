@@ -1,6 +1,7 @@
 package sorts.byhalf;
 
 import abstractbyhaldsorter.AbstractByHalfSorter;
+import abstractsorter.AbstractSorter;
 import interfacepackage.annotation.ClassSortAnnotation;
 import interfacepackage.annotation.MethodSortAnnotation;
 import sorts.bubblesort.BubbleSort;
@@ -35,7 +36,7 @@ public class ByHalf extends AbstractByHalfSorter implements Time {
      * Return measured time
      */
     @Override
-    public long getTime() {
+    public double getTime() {
         //System.out.print("Time is " + time);
         return time;
     }
@@ -53,7 +54,6 @@ public class ByHalf extends AbstractByHalfSorter implements Time {
      *
      * @see BubbleSort BubbleSort class
      */
-
     @Override
     @MethodSortAnnotation
     public void sort(int[] inputArray) {

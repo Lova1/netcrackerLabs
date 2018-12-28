@@ -23,31 +23,42 @@ public class SortNSizeArray {
     public Map<String, Map> getGeneralTimesMap() {
         return generalTimesMap;
     }
-
-    protected Map<String, ArrayList> getRandArrayMap() {
+    public Map<String, ArrayList> getRandArrayMap() {
         return randArrayMap;
     }
-
-    protected Map<String, ArrayList> getReversArrayMap() {
+    public Map<String, ArrayList> getReversArrayMap() {
         return reversArrayMap;
     }
+    public Map<String, ArrayList> getRandLastElementMap() { return randLastElementMap; }
+    public Map<String, ArrayList> getSortedMap() { return sortedMap; }
 
-    protected Map<String, ArrayList> randLastElementMap() {
-        return randLastElementMap;
+    private ArrayList<Double> nBubbleSortTime = new ArrayList<>();
+    private ArrayList<Double> nMyArraysTime = new ArrayList<>();
+    private ArrayList<Double> nQsortTime = new ArrayList<>();
+    private ArrayList<Double> nReverseBubbleSortTime = new ArrayList<>();
+
+    public ArrayList<Double> getnBubbleSortTimeList() {
+        return nBubbleSortTime;
+    }
+    public ArrayList<Double> getnMyArraysTimeList() {
+        return nMyArraysTime;
+    }
+    public ArrayList<Double> getnQsortTimeList() {
+        return nQsortTime;
+    }
+    public ArrayList<Double> getnReverseBubbleSortTimeList() {
+        return nReverseBubbleSortTime;
     }
 
-    protected Map<String, ArrayList> sortedMap() {
-        return sortedMap;
-    }
 
     public void sortRandArray(int maxArrSize) {
 
         if (maxArrSize > 1) {
 
-            ArrayList<Long> nBubbleSortTime = new ArrayList<>();
-            ArrayList<Long> nMyArraysTime = new ArrayList<>();
-            ArrayList<Long> nQsortTime = new ArrayList<>();
-            ArrayList<Long> nReverseBubbleSortTime = new ArrayList<>();
+            nBubbleSortTime = new ArrayList<>();
+            nMyArraysTime = new ArrayList<>();
+            nQsortTime = new ArrayList<>();
+            nReverseBubbleSortTime = new ArrayList<>();
 
             int[] fillers;
 
@@ -94,10 +105,11 @@ public class SortNSizeArray {
     public void sortReversArray(int maxArrSize) {
 
         if (maxArrSize > 1) {
-            ArrayList<Long> nBubbleSortTime = new ArrayList<>();
-            ArrayList<Long> nMyArraysTime = new ArrayList<>();
-            ArrayList<Long> nQsortTime = new ArrayList<>();
-            ArrayList<Long> nReverseBubbleSortTime = new ArrayList<>();
+
+            nBubbleSortTime = new ArrayList<>();
+            nMyArraysTime = new ArrayList<>();
+            nQsortTime = new ArrayList<>();
+            nReverseBubbleSortTime = new ArrayList<>();
 
             int[] fillers;
 
@@ -144,10 +156,11 @@ public class SortNSizeArray {
     public void sortRandLastElementArray(int maxArrSize) {
 
         if (maxArrSize > 1) {
-            ArrayList<Long> nBubbleSortTime = new ArrayList<>();
-            ArrayList<Long> nMyArraysTime = new ArrayList<>();
-            ArrayList<Long> nQsortTime = new ArrayList<>();
-            ArrayList<Long> nReverseBubbleSortTime = new ArrayList<>();
+
+            nBubbleSortTime = new ArrayList<>();
+            nMyArraysTime = new ArrayList<>();
+            nQsortTime = new ArrayList<>();
+            nReverseBubbleSortTime = new ArrayList<>();
 
             int[] fillers;
 
@@ -194,10 +207,11 @@ public class SortNSizeArray {
     public void sortSortedArray(int maxArrSize) {
 
         if (maxArrSize > 1) {
-            ArrayList<Long> nBubbleSortTime = new ArrayList<>();
-            ArrayList<Long> nMyArraysTime = new ArrayList<>();
-            ArrayList<Long> nQsortTime = new ArrayList<>();
-            ArrayList<Long> nReverseBubbleSortTime = new ArrayList<>();
+
+            nBubbleSortTime  = new ArrayList<>();
+            nMyArraysTime = new ArrayList<>();
+            nQsortTime = new ArrayList<>();
+            nReverseBubbleSortTime = new ArrayList<>();
 
             int[] fillers;
 
@@ -241,56 +255,56 @@ public class SortNSizeArray {
         }
     }
 
-    private static ArrayList nBubbleSort(int[] fillers, ArrayList<Long> times) {
+    private static ArrayList nBubbleSort(int[] fillers, ArrayList<Double> times) {
 
         int[] array = fillers;
 
         BubbleSort bubbleSort = new BubbleSort();
         bubbleSort.sort(array);
 
-        long time = bubbleSort.getTime();
+        double time = bubbleSort.getTime();
         times.add(time);
 
         return times;
 
     }
 
-    private static ArrayList nReverseBubbleSort(int[] fillers, ArrayList<Long> times) {
+    private static ArrayList nReverseBubbleSort(int[] fillers, ArrayList<Double> times) {
 
         int[] array = fillers;
 
         BubbleSort bubbleSort = new BubbleSort();
         bubbleSort.reverseSort(array);
 
-        long time = bubbleSort.getTime();
+        double time = bubbleSort.getTime();
         times.add(time);
 
         return times;
 
     }
 
-    private static ArrayList nMyArrays(int[] fillers, ArrayList<Long> times) {
+    private static ArrayList nMyArrays(int[] fillers, ArrayList<Double> times) {
 
         int[] array = fillers;
 
         MyArrays myArrays = new MyArrays();
         myArrays.sort(array);
 
-        long time = myArrays.getTime();
+        double time = myArrays.getTime();
         times.add(time);
 
         return times;
 
     }
 
-    private static ArrayList nQsort(int[] fillers, ArrayList<Long> times) {
+    private static ArrayList nQsort(int[] fillers, ArrayList<Double> times) {
 
         int[] array = fillers;
 
         Qsort qsort = new Qsort();
         qsort.sort(array);
 
-        long time = qsort.getTime();
+        double time = qsort.getTime();
         times.add(time);
 
         return times;

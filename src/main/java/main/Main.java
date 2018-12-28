@@ -1,13 +1,18 @@
 package main;
 
-import analyzer.Analyzer;
+import xls.Line;
 
+import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         System.out.println("from basic main");
-        Analyzer.analyze();
+        //Analyzer.analyze();
+
+
+        Line line = new Line();
+        line.dddd();
     }
 }

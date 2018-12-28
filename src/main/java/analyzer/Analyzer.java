@@ -28,7 +28,7 @@ public class Analyzer {
         Map<String, Map> generalTimes = sortNSizeArray.getGeneralTimesMap();
         if (!(generalTimes.isEmpty())) {
             System.out.println("---------------------------------------------------------------------------------------");
-            System.out.println("generalTimesMap" + generalTimes.get("randArrayMap"));
+            System.out.println("randArrayMap" + generalTimes.get("randArrayMap"));
             System.out.println("reversArrayMap" + generalTimes.get("reversArrayMap"));
             System.out.println("randLastElementMap" + generalTimes.get("randLastElementMap"));
             System.out.println("sortedMap" + generalTimes.get("sortedMap"));

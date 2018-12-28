@@ -31,7 +31,7 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
      * Return measured time
      */
     @Override
-    public long getTime() {
+    public double getTime() {
         //System.out.print("Time is " + time);
         return time;
     }
