@@ -11,8 +11,7 @@ public class Main {
         System.out.println("from basic main");
         //Analyzer.analyze();
 
-
         Line line = new Line();
-        line.dddd();
+        //line.dddd();
     }
 }

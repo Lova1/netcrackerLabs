@@ -77,6 +77,7 @@ public class SortNSizeArray {
                     randArrayMap.put("nQsort", nQsortTime);
                 } catch (StackOverflowError stackOverflowError) {
                     System.out.println("StackOverflowError \n\t for nQsort package analyzer class SortNLensArray");
+                    throw new StackOverflowError("stackOverflowError for nQsort package analyzer class SortNLensArray");
                 }
 
                 nReverseBubbleSort(fillers, nReverseBubbleSortTime);
@@ -128,6 +129,7 @@ public class SortNSizeArray {
                     reversArrayMap.put("nQsort", nQsortTime);
                 } catch (StackOverflowError stackOverflowError) {
                     System.out.println("StackOverflowError \n\t for nQsort package analyzer class SortNLensArray");
+                    throw new StackOverflowError("stackOverflowError for nQsort package analyzer class SortNLensArray");
                 }
 
                 nReverseBubbleSort(fillers, nReverseBubbleSortTime);
@@ -179,6 +181,7 @@ public class SortNSizeArray {
                     randLastElementMap.put("nQsort", nQsortTime);
                 } catch (StackOverflowError stackOverflowError) {
                     System.out.println("StackOverflowError \n\t for nQsort package analyzer class SortNLensArray");
+                    throw new StackOverflowError("stackOverflowError for nQsort package analyzer class SortNLensArray");
                 }
 
                 nReverseBubbleSort(fillers, nReverseBubbleSortTime);
@@ -230,6 +233,7 @@ public class SortNSizeArray {
                     sortedMap.put("nQsort", nQsortTime);
                 } catch (StackOverflowError stackOverflowError) {
                     System.out.println("StackOverflowError \n\t for nQsort package analyzer class SortNLensArray");
+                    throw new StackOverflowError("stackOverflowError for nQsort package analyzer class SortNLensArray");
                 }
 
                 nReverseBubbleSort(fillers, nReverseBubbleSortTime);

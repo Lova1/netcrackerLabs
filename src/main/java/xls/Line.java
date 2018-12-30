@@ -64,25 +64,25 @@ public class Line {
             bottomAxis.setTitle("x"); // https://stackoverflow.com/questions/32010765
             XDDFValueAxis leftAxis = chart.createValueAxis(AxisPosition.LEFT);
             leftAxis.setTitle("f(x)");
-            leftAxis.setCrosses(AxisCrosses.AUTO_ZERO); // no changes
+            leftAxis.setCrosses(AxisCrosses.AUTO_ZERO);
 
-            XDDFDataSource<Double> xs = XDDFDataSourcesFactory.fromNumericCellRange(sheet, new CellRangeAddress(0, 0, 0, 9));
-            XDDFNumericalDataSource<Double> ys1 = XDDFDataSourcesFactory.fromNumericCellRange(sheet, new CellRangeAddress(1, 1, 0, 9 ));
-            XDDFNumericalDataSource<Double> ys2 = XDDFDataSourcesFactory.fromNumericCellRange(sheet, new CellRangeAddress(2, 2, 0, 9 ));
+            XDDFDataSource<Double> xs = XDDFDataSourcesFactory.fromNumericCellRange(sheet, new CellRangeAddress(0, 0, 0, NUM_OF_COLUMNS - 1));
+            XDDFNumericalDataSource<Double> ys1 = XDDFDataSourcesFactory.fromNumericCellRange(sheet, new CellRangeAddress(1, 1, 0, NUM_OF_COLUMNS - 1));
+            XDDFNumericalDataSource<Double> ys2 = XDDFDataSourcesFactory.fromNumericCellRange(sheet, new CellRangeAddress(2, 2, 0, NUM_OF_COLUMNS - 1));
 
             XDDFLineChartData data = (XDDFLineChartData) chart.createData(ChartTypes.LINE, bottomAxis, leftAxis);
             XDDFLineChartData.Series series1 = (XDDFLineChartData.Series) data.addSeries(xs, ys1);
-            series1.setTitle("3x", null); // https://stackoverflow.com/questions/21855842
-            series1.setSmooth(true); // https://stackoverflow.com/questions/29014848
+            series1.setTitle("2x", null); // https://stackoverflow.com/questions/21855842
+            series1.setSmooth(false); // https://stackoverflow.com/questions/29014848
             series1.setMarkerStyle(MarkerStyle.STAR); // https://stackoverflow.com/questions/39636138
             XDDFLineChartData.Series series2 = (XDDFLineChartData.Series) data.addSeries(xs, ys2);
-            series2.setTitle("4x", null);
+            series2.setTitle("3x", null);
             series2.setSmooth(true);
             series2.setMarkerSize((short) 6);
             series2.setMarkerStyle(MarkerStyle.TRIANGLE); // https://stackoverflow.com/questions/39636138
-            //chart.plot(data);
+            chart.plot(data);
 
-            // if your series have missing values like https://stackoverflow.com/questions/29014848
+            // if your series have missing values like https://stackoverflow.com/questions/2901484chart.displayBlanksAs(DisplayBlanks.GAP);
             // chart.displayBlanksAs(DisplayBlanks.GAP);
 
             // https://stackoverflow.com/questions/24676460
@@ -90,7 +90,7 @@ public class Line {
             solidLineSeries(data, 1, PresetColor.TURQUOISE);
 
             // Write the output to a file
-            try (FileOutputStream fileOut = new FileOutputStream("Example-chart.xlsx")) {
+            try (FileOutputStream fileOut = new FileOutputStream("ooxml-line-chart.xlsx")) {
                 wb.write(fileOut);
             }
         }

@@ -55,7 +55,7 @@ public class MyReflection {
      *
      * @param object Input class References
      */
-    public static void getSortAnnotatedClasses(Object object) {
+    public static Set getSortAnnotatedClasses(Object object) {
 
         Class clazz = object.getClass();
         Reflections reflections = new Reflections(clazz);
@@ -70,6 +70,8 @@ public class MyReflection {
                 System.out.println(annotated.getName());
             }
         }
+
+        return annotateds;
     }
 
     /**
@@ -77,7 +79,7 @@ public class MyReflection {
      *
      * @param object Input class References
      */
-    public static void getFillerAnnotatedClasses(Object object) {
+    public static Set getFillerAnnotatedClasses(Object object) {
 
         Class clazz = object.getClass();
         Reflections reflections = new Reflections(clazz);
@@ -91,6 +93,8 @@ public class MyReflection {
                 System.out.println(annotated.getName());
             }
         }
+
+        return annotateds;
     }
 
     /**
@@ -98,7 +102,7 @@ public class MyReflection {
      *
      * @param object Input class References
      */
-    public static void getClassesExtendsAbstractSorter(Object object) {
+    public static Set getClassesExtendsAbstractSorter(Object object) {
 
         Class clazz = object.getClass();
         Reflections reflections = new Reflections(clazz);
@@ -112,6 +116,8 @@ public class MyReflection {
                 System.out.println(abstractSorter.getName() + "\n" + "Superclass :" + abstractSorter.getSuperclass());
             }
         }
+
+        return subTypes;
     }
 
 }
