@@ -1,7 +1,6 @@
 package fillers;
 
-import interfacepackage.annotation.ClassFillersAnnotation;
-import interfacepackage.annotation.MethodFillersAnnotation;
+import annotation.MethodFillersAnnotation;
 
 import java.util.Random;
 
@@ -13,7 +12,7 @@ import java.util.Random;
  * This is an <strong>static</strong> class that create 4 different type of arrays
  * </p>
  */
-@ClassFillersAnnotation
+
 public class Fillers {
 
     /**
@@ -173,7 +172,7 @@ public class Fillers {
         if (arrSize > 0) {
             int[] arr = new int[arrSize];
 
-            for (int i = 1; i < arrSize; i++) {
+            for (int i = 0; i < arrSize; i++) {
                 arr[i] = (int) Math.round((Math.random() * 300/*fromRenge*/) - 100/*toRange*/);
             }
 

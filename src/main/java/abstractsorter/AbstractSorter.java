@@ -1,4 +1,5 @@
 package abstractsorter;
+import interfaces.Time;
 
 /**
  * @author Lova Vardanian
@@ -8,7 +9,7 @@ package abstractsorter;
  * This is an main abstract class that include only one abstract method sort
  * </p>
  */
-public abstract class AbstractSorter {
+public abstract class AbstractSorter implements Time {
 
     public abstract void sort(int[] inputArray);
 

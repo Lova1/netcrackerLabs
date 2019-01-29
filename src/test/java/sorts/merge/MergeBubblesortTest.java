@@ -1,4 +1,4 @@
-package sorts.byhalf;
+package sorts.merge;
 
 import org.junit.After;
 import org.junit.Before;
@@ -8,9 +8,10 @@ import org.junit.rules.Timeout;
 
 import static org.junit.Assert.*;
 
-public class ByHalfTest {
+public class MergeBubblesortTest {
 
-    ByHalf byHalf = new ByHalf();
+    MergeBubblesort mergeBubblesort = new MergeBubblesort();
+
     int[] sortedArr = {0, 1, 2, 2, 3, 5, 7, 9, 11, 22};
     int[] arr = {3, 2, 11, 1, 0, 7, 22, 5, 9, 2};
 
@@ -30,28 +31,7 @@ public class ByHalfTest {
     @Test
     public void sort() {
 
-        byHalf.sort(arr);
-        assertArrayEquals(sortedArr, arr);
-    }
-
-    @Test
-    public void qsort() {
-
-        byHalf.qsort(arr);
-        assertArrayEquals(sortedArr, arr);
-    }
-
-    @Test
-    public void arraysSort() {
-
-        byHalf.arraysSort(arr);
-        assertArrayEquals(sortedArr, arr);
-    }
-
-    @Test
-    public void reverseSort() {
-
-        byHalf.reverseSort(arr);
+        mergeBubblesort.sort(arr);
         assertArrayEquals(sortedArr, arr);
     }
 }

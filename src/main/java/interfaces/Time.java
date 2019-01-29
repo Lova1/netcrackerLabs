@@ -1,4 +1,4 @@
-package timeinterface;
+package interfaces;
 
 /**
  * @author Lova Vardanian
@@ -13,6 +13,6 @@ public interface Time {
     /**
      * @return non negative int number
      */
-    long getTime();
+    double getTime();
 
 }

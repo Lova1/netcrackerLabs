@@ -1,12 +1,7 @@
 package analyzer;
 
 import fillers.Fillers;
-import sorts.bubblesort.BubbleSort;
-import sorts.byhalf.ByHalf;
-import sorts.qsort.Qsort;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class Analyzer {
@@ -18,17 +13,17 @@ public class Analyzer {
 
         a = Fillers.randLastElement(as);
 
-        SortNSizeArray sortNSizeArray = new SortNSizeArray();
-        sortNSizeArray.sortRandArray(1_000);
-        sortNSizeArray.sortRandLastElementArray(1);
-        sortNSizeArray.sortReversArray(10);
-        sortNSizeArray.sortSortedArray(100);
+        SortNSizeMap sortNSizeMap = new SortNSizeMap();
+        sortNSizeMap.sortRandArray(1_000);
+        sortNSizeMap.sortRandLastElementArray(1);
+        sortNSizeMap.sortReversArray(10);
+        sortNSizeMap.sortSortedArray(100);
 
 
-        Map<String, Map> generalTimes = sortNSizeArray.getGeneralTimesMap();
+        Map<String, Map> generalTimes = sortNSizeMap.getGeneralTimesMap();
         if (!(generalTimes.isEmpty())) {
             System.out.println("---------------------------------------------------------------------------------------");
-            System.out.println("generalTimesMap" + generalTimes.get("randArrayMap"));
+            System.out.println("randArrayMap" + generalTimes.get("randArrayMap"));
             System.out.println("reversArrayMap" + generalTimes.get("reversArrayMap"));
             System.out.println("randLastElementMap" + generalTimes.get("randLastElementMap"));
             System.out.println("sortedMap" + generalTimes.get("sortedMap"));
@@ -39,9 +34,9 @@ public class Analyzer {
         //q.getTime();
         //System.out.println("\n");
 
-        //MyReflection.getSortAnnotatedClasses(q);
-        //MyReflection.getClassesExtendsAbstractSorter(qsort);
-        //MyReflection.getAnnotatedMethods(q);
+        //Reflection.getSortAnnotatedClasses(q);
+        //Reflection.getClassesExtendsAbstractSorter(qsort);
+        //Reflection.getAnnotatedMethods(q);
 
 /*
         MyArrays m = new MyArrays();
@@ -60,22 +55,7 @@ public class Analyzer {
         b.getTime();
         System.out.println("\n");
 
-        ByHalf byHalf = new ByHalf();
-        byHalf.sort(a);
-        System.out.println("\n");
-        byHalf.getTime();
-        System.out.println("\n");
-        byHalf.arraysSort(a);
-        System.out.println("\n");
-        byHalf.getTime();
-        System.out.println("\n");
-        byHalf.qsort(a);
-        System.out.println("\n");
-        byHalf.getTime();
-        System.out.println("\n");
-        byHalf.reverseSort(a);
-        System.out.println("\n");
-        byHalf.getTime();*/
+        */
     }
 
 }

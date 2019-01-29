@@ -1,9 +1,7 @@
 package sorts.bubblesort;
 
 import abstractbubblesorter.AbstractBubbleSorter;
-import interfacepackage.annotation.ClassSortAnnotation;
-import interfacepackage.annotation.MethodSortAnnotation;
-import timeinterface.Time;
+import interfaces.Time;
 
 /**
  * @author Lova Vardanian
@@ -17,8 +15,7 @@ import timeinterface.Time;
  */
 
 //todo checks for null
-@ClassSortAnnotation
-public class BubbleSort extends AbstractBubbleSorter implements Time {
+public class BubbleSort extends AbstractBubbleSorter {
 
     /**
      * @param time is parameter that save time of method that has been started/stopped
@@ -31,7 +28,7 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
      * Return measured time
      */
     @Override
-    public long getTime() {
+    public double getTime() {
         //System.out.print("Time is " + time);
         return time;
     }
@@ -39,7 +36,7 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
     /**
      * Output all element
      */
-    private void arrPrint(int[] arr) {
+    private synchronized void arrPrint(int[] arr) {
         for (int i = 0; i < arr.length; i++)
             System.out.print(arr[i] + " ");
     }
@@ -58,8 +55,7 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
      */
 
     @Override
-    @MethodSortAnnotation
-    public void sort(int[] inputArray) {
+    public synchronized void sort(int[] inputArray) {
 
         if (inputArray.length != 0) {
 
@@ -133,8 +129,7 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
      */
 
     @Override
-    @MethodSortAnnotation
-    public void reverseSort(int[] inputArray) {
+    public synchronized void reverseSort(int[] inputArray) {
 
         if (inputArray.length != 0) {
 
@@ -193,4 +188,5 @@ public class BubbleSort extends AbstractBubbleSorter implements Time {
             return;
         }
     }
+
 }

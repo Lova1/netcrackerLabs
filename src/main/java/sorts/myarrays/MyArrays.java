@@ -1,9 +1,7 @@
 package sorts.myarrays;
 
 import abstractsorter.AbstractSorter;
-import interfacepackage.annotation.ClassSortAnnotation;
-import interfacepackage.annotation.MethodSortAnnotation;
-import timeinterface.Time;
+import interfaces.Time;
 
 import java.util.Arrays;
 
@@ -19,8 +17,7 @@ import java.util.Arrays;
  */
 
 //todo checks for null
-@ClassSortAnnotation
-public class MyArrays extends AbstractSorter implements Time {
+public class MyArrays extends AbstractSorter {
 
     /**
      * @param time is parameter that save time of method that has been started/stopped
@@ -33,7 +30,7 @@ public class MyArrays extends AbstractSorter implements Time {
      * Return measured time
      */
     @Override
-    public long getTime() {
+    public double getTime() {
         //System.out.print("Time is " + time);
         return time;
     }
@@ -55,7 +52,6 @@ public class MyArrays extends AbstractSorter implements Time {
      */
 
     @Override
-    @MethodSortAnnotation
     public void sort(int[] inputArray) {
 
         if (inputArray.length != 0) {
