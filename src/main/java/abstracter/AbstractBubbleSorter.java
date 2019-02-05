@@ -1,6 +1,4 @@
-package abstractbubblesorter;
-
-import abstractsorter.AbstractSorter;
+package abstracter;
 
 /**
  * @author Lova Vardanian

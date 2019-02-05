@@ -1,13 +1,14 @@
+/*
 package sorts.merge;
 
-import abstractsorter.AbstractSorter;
+import abstracter.AbstractSorter;
 import sorts.bubblesort.BubbleSort;
 import interfaces.Time;
 import java.util.Arrays;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 
+
+*/
 /**
  * @author Lova Vardanian
  * @version 1.1
@@ -16,19 +17,25 @@ import java.util.concurrent.locks.ReentrantLock;
  * also this class implements {@link Time#getTime()}
  * </p>
  * @since 1.1
- */
+ *//*
+
+
 
 //todo checks for null
 public class MergeBubblesort extends AbstractSorter implements Runnable{
 
-    /**
+
+*/
+/**
      * @param time is parameter that save time of method that has been started/stopped
      * @param startTime is parameter for start time when method has been started
      * @param firstArray is first array for save subarray from input array
      * @param secondArray is second array for save subarray from input array
      * @param fRange is counter for fist subarray
      * @param sRange is counter for second subarray
-     */
+     *//*
+
+
     private long time = 0;
     private long startTime = 0;
 
@@ -40,9 +47,13 @@ public class MergeBubblesort extends AbstractSorter implements Runnable{
 
     private int[] iArray;
 
-    /**
+
+*/
+/**
      * Return measured time
-     */
+     *//*
+
+
     @Override
     public synchronized double getTime() {
         //System.out.print("Time is " + time);
@@ -72,19 +83,27 @@ public class MergeBubblesort extends AbstractSorter implements Runnable{
 
     }
 
-    /**
+
+*/
+/**
      * Output all element
-     */
+     *//*
+
+
     private synchronized void arrPrint(int[] arr) {
         for (int i = 0; i < arr.length; i++)
             System.out.print(arr[i] + " ");
     }
 
-    /**
+
+*/
+/**
      * Method that divide input array by two parts and sort it by using {@link BubbleSort#sort(int[])}
      *
      * @see BubbleSort BubbleSort class
-     */
+     *//*
+
+
     @Override
     public synchronized void sort(int[] inputArray) {
 
@@ -151,3 +170,5 @@ public class MergeBubblesort extends AbstractSorter implements Runnable{
     }
 
 }
+
+*/

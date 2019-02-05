@@ -1,6 +1,6 @@
 package sorts.bubblesort;
 
-import abstractbubblesorter.AbstractBubbleSorter;
+import abstracter.AbstractBubbleSorter;
 import interfaces.Time;
 
 /**

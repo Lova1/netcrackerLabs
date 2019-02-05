@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 public class MergeMyArraysTest {
 
-    MergeMyArrays mergeMyArrays = new MergeMyArrays();
+    MergeMyArrays2 mergeMyArrays = new MergeMyArrays2();
 
     int[] sortedArr = {0, 1, 2, 2, 3, 5, 7, 9, 11, 22};
     int[] arr = {3, 2, 11, 1, 0, 7, 22, 5, 9, 2};

@@ -1,7 +1,7 @@
 package reflection;
 
-import abstractbubblesorter.AbstractBubbleSorter;
-import abstractsorter.AbstractSorter;
+import abstracter.AbstractBubbleSorter;
+import abstracter.AbstractSorter;
 import annotation.MethodFillersAnnotation;
 import fillers.Fillers;
 import org.reflections.Reflections;
@@ -20,7 +20,6 @@ import java.util.Set;
  * and can find super class for any classes
  */
 public class Reflection {
-
 
     /**
      * Method for finding annotate by MethodFillersAnnotation annotation methods
@@ -50,7 +49,7 @@ public class Reflection {
      * Method for finding classes that extends AbstractSorter
      * @return {@code arraySorters} that is ArrayList which include classes Extends by AbstractSorter class
      */
-    public ArrayList getClassesExtendsAbstractSorter() {
+    public ArrayList getAbstractSorter() {
 
         ArrayList<AbstractSorter> arraySorters = new ArrayList<>();
 
@@ -85,7 +84,7 @@ public class Reflection {
      * Method for finding classes that extends AbstractBubbleSorter
      * @return {@code arraySorters} that is ArrayList which include classes Extends by AbstractBubbleSorter class
      */
-    public ArrayList getClassesExtendsAbstractBubbleSorter() {
+    public ArrayList getAbstractBubbleSorter() {
 
         ArrayList<AbstractBubbleSorter> arraySorters = new ArrayList<>();
 
@@ -116,9 +115,50 @@ public class Reflection {
         return arraySorters;
     }
 
+    public ArrayList getAllSorters(){
+
+        ArrayList<AbstractSorter> aSorters = getAbstractSorter();
+        ArrayList<AbstractBubbleSorter> abSorters = getAbstractBubbleSorter();
+
+        ArrayList<AbstractSorter> allSorters = new ArrayList<>();
+
+        if (!aSorters.isEmpty()){
+            for (int i = 0; i < aSorters.size(); i++) {
+                allSorters.add(aSorters.get(i));
+            }
+        }
+
+        if (!abSorters.isEmpty()) {
+            for (int i = 0; i < abSorters.size(); i++) {
+                allSorters.add(abSorters.get(i));
+            }
+        }
+
+        return allSorters;
+    }
+
+    public void printAllSorters(){
+
+        ArrayList arrayList = new ArrayList();
+        Reflection reflection = new Reflection();
+
+        if (!reflection.getAllSorters().isEmpty()) {
+            for (int i = 0; i < reflection.getAllSorters().size(); i++) {
+                arrayList.add(reflection.getAllSorters().get(i));
+            }
+        }
+
+        if (!reflection.getAllSorters().isEmpty()) {
+            for (int i = 0; i < reflection.getAllSorters().size(); i++) {
+                System.out.println(arrayList.get(i).getClass().getSimpleName());
+            }
+        }
+
+    }
+
     /**
      * <p>
-     * Is used in {@link #getClassesExtendsAbstractSorter()} to check if the considered method is abstract or not.
+     * Is used in {@link #getAbstractSorter()} to check if the considered method is abstract or not.
      * </p>
      *
      * @param sortClass considered class.
@@ -133,7 +173,7 @@ public class Reflection {
 
     /**
      * <p>
-     * Is used in {@link #getClassesExtendsAbstractBubbleSorter()} to check if the considered method is abstract or not.
+     * Is used in {@link #getAbstractBubbleSorter()} to check if the considered method is abstract or not.
      * </p>
      *
      * @param sortClass considered class.

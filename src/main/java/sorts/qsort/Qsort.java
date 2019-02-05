@@ -1,6 +1,6 @@
 package sorts.qsort;
 
-import abstractsorter.AbstractSorter;
+import abstracter.AbstractSorter;
 import interfaces.Time;
 
 /**

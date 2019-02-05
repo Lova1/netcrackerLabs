@@ -1,6 +1,6 @@
 package sorts.myarrays;
 
-import abstractsorter.AbstractSorter;
+import abstracter.AbstractSorter;
 import interfaces.Time;
 
 import java.util.Arrays;

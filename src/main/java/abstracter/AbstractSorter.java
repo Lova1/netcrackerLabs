@@ -1,4 +1,4 @@
-package abstractsorter;
+package abstracter;
 import interfaces.Time;
 
 /**

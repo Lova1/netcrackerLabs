@@ -1,12 +1,14 @@
+/*
 package sorts.merge;
 
 
-import abstractsorter.AbstractSorter;
+import abstracter.AbstractSorter;
 import sorts.qsort.Qsort;
 import interfaces.Time;
 
 import java.util.Arrays;
 
+*/
 /**
  * @author Lova Vardanian
  * @version 1.1
@@ -15,19 +17,22 @@ import java.util.Arrays;
  * also this class implements {@link Time#getTime()}
  * </p>
  * @since 1.1
- */
+ *//*
+
 
 //todo checks for null
 public class MergeQsort extends AbstractSorter implements Runnable{
 
-    /**
+    */
+/**
      * @param time is parameter that save time of method that has been started/stopped
      * @param startTime is parameter for start time when method has been started
      * @param firstArray is first array for save subarray from input array
      * @param secondArray is second array for save subarray from input array
      * @param fRange is counter for fist subarray
      * @param sRange is counter for second subarray
-     */
+     *//*
+
     private volatile long time = 0;
     private volatile long startTime = 0;
 
@@ -39,9 +44,11 @@ public class MergeQsort extends AbstractSorter implements Runnable{
 
     private volatile int[] iArray;
 
-    /**
+    */
+/**
      * Return measured time
-     */
+     *//*
+
     @Override
     public double getTime() {
         //System.out.print("Time is " + time);
@@ -70,19 +77,23 @@ public class MergeQsort extends AbstractSorter implements Runnable{
         System.out.println("MergeBubblesort Time " + getTime());
     }
 
-    /**
+    */
+/**
      * Output all element
-     */
+     *//*
+
     private void arrPrint(int[] arr) {
         for (int i = 0; i < arr.length; i++)
             System.out.print(arr[i] + " ");
     }
 
-    /**
+    */
+/**
      * Method that divide input array by two parts and sort it by using {@link Qsort#sort(int[])}
      *
      * @see Qsort Qsort class
-     */
+     *//*
+
     @Override
     public void sort(int[] inputArray) {
 
@@ -149,3 +160,4 @@ public class MergeQsort extends AbstractSorter implements Runnable{
     }
 }
 
+*/
