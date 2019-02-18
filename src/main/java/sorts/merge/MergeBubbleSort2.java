@@ -1,15 +1,17 @@
 package sorts.merge;
 
-import abstracter.AbstractMegre;
+import abstracter.AbstractMerge;
+import abstracter.AbstractSorter;
 import sorts.bubblesort.BubbleSort;
 
-public class MergeBubbleSort2 extends AbstractMegre {
+public class MergeBubbleSort2 extends AbstractMerge {
 
     @Override
     public void sort(int[] inputArray) {
 
         BubbleSort bubbleSort = new BubbleSort();
-        merge(inputArray,bubbleSort);
+        merge(inputArray,(AbstractSorter)bubbleSort);
+
 
     }
 }

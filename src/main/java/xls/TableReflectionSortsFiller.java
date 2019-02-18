@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class TableReflectionSortsFiller {
 
     //todo set the max array value for Fillers
-    private static int upToSize = 100/*_000*/;
+    private static int upToSize = 10/*_000*/;
 
     private static ArrayList<String> aNameList = new ArrayList<>();
     private static ArrayList<String> abNameList = new ArrayList<>();

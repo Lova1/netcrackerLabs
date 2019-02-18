@@ -1,9 +1,9 @@
 package sorts.merge;
 
-import abstracter.AbstractMegre;
+import abstracter.AbstractMerge;
 import sorts.myarrays.MyArrays;
 
-public class MergeMyArrays2 extends AbstractMegre {
+public class MergeMyArrays2 extends AbstractMerge {
 
     @Override
     public void sort(int[] inputArray) {

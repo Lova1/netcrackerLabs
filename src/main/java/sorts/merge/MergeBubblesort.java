@@ -1,10 +1,12 @@
 /*
+
 package sorts.merge;
 
 import abstracter.AbstractSorter;
 import sorts.bubblesort.BubbleSort;
 import interfaces.Time;
 import java.util.Arrays;
+
 
 
 
@@ -21,8 +23,10 @@ import java.util.Arrays;
 
 
 
+
 //todo checks for null
 public class MergeBubblesort extends AbstractSorter implements Runnable{
+
 
 
 */
@@ -34,6 +38,7 @@ public class MergeBubblesort extends AbstractSorter implements Runnable{
      * @param fRange is counter for fist subarray
      * @param sRange is counter for second subarray
      *//*
+
 
 
     private long time = 0;
@@ -48,10 +53,12 @@ public class MergeBubblesort extends AbstractSorter implements Runnable{
     private int[] iArray;
 
 
+
 */
 /**
      * Return measured time
      *//*
+
 
 
     @Override
@@ -84,10 +91,12 @@ public class MergeBubblesort extends AbstractSorter implements Runnable{
     }
 
 
+
 */
 /**
      * Output all element
      *//*
+
 
 
     private synchronized void arrPrint(int[] arr) {
@@ -96,12 +105,14 @@ public class MergeBubblesort extends AbstractSorter implements Runnable{
     }
 
 
+
 */
 /**
      * Method that divide input array by two parts and sort it by using {@link BubbleSort#sort(int[])}
      *
      * @see BubbleSort BubbleSort class
      *//*
+
 
 
     @Override
@@ -170,5 +181,4 @@ public class MergeBubblesort extends AbstractSorter implements Runnable{
     }
 
 }
-
 */

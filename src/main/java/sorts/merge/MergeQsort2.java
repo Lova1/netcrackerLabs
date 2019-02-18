@@ -1,9 +1,9 @@
 package sorts.merge;
 
-import abstracter.AbstractMegre;
+import abstracter.AbstractMerge;
 import sorts.qsort.Qsort;
 
-public class MergeQsort2 extends AbstractMegre {
+public class MergeQsort2 extends AbstractMerge {
 
     @Override
     public void sort(int[] inputArray) {

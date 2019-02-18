@@ -1,9 +1,10 @@
 package sorts.merge;
 
-import abstracter.AbstractMegre;
+import abstracter.AbstractBubbleSorter;
+import abstracter.AbstractMerge;
 import sorts.bubblesort.BubbleSort;
 
-public class MergeReverseBubbleSort2 extends AbstractMegre {
+public class MergeReverseBubbleSort2 extends AbstractMerge {
 
     @Override
     public void sort(int[] inputArray) {
