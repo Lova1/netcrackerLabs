@@ -7,33 +7,35 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import reflection.Reflection;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class TableReflectionSortsFiller {
 
     //todo set the max array value for Fillers
-    private static int upToSize = 10/*_000*/;
+    private static int upToSize = 1000/*_000*/;
 
     private static ArrayList<String> aNameList = new ArrayList<>();
     private static ArrayList<String> abNameList = new ArrayList<>();
 
-    public static ArrayList<String> getListAbstractSorterNames(){
+    public static ArrayList<String> getListAbstractSorterNames() {
         return aNameList;
     }
-    public static ArrayList<String> getListAbstractBubbleSorterNames(){
+
+    public static ArrayList<String> getListAbstractBubbleSorterNames() {
         return abNameList;
     }
 
 
-    public static void createTable(Sheet sheet,String fillerName) {
+    public static void createTable(Sheet sheet, String fillerName) {
 
-        setSortsTable(sheet,fillerName,upToSize);
-        setNumOfElements(sheet,upToSize);
+        setSortsTable(sheet, fillerName, upToSize);
+        setNumOfElements(sheet, upToSize);
 
     }
 
-    private static void setSortsTable(Sheet sheet,String fillerName,int upToSize) {
+    private static void setSortsTable(Sheet sheet, String fillerName, int upToSize) {
 
         Reflection reflection = new Reflection();
 
@@ -55,9 +57,11 @@ public class TableReflectionSortsFiller {
             aNameList.add(abstractSorter.getClass().getSimpleName());
 
             ArrayList<Method> fillers = reflection.getFillersAnnotatedMethods();
-            int[] ar = new int[0];
 
-            for(int size = 1; size <= upToSize; size*=10) {
+            int[] ar = {};
+
+            for (int size = 1; size <= upToSize; size *= 10) {
+
                 for (Method filler : fillers) {
 
                     if (filler.getName().equals(fillerName)) {
@@ -80,6 +84,7 @@ public class TableReflectionSortsFiller {
                             return;
                         }
                     }
+
                 }
 
                 abstractSorter.sort(ar);
@@ -89,7 +94,7 @@ public class TableReflectionSortsFiller {
 
                 start++;
             }
-            start=2;
+            start = 2;
         }
 
 
@@ -103,9 +108,10 @@ public class TableReflectionSortsFiller {
             abNameList.add(abSorts.getClass().getSimpleName());
 
             ArrayList<Method> fillers = reflection.getFillersAnnotatedMethods();
-            int[] ar = new int[0];
 
-            for(int size = 1; size <= upToSize; size*=10) {
+            int[] ar = {};
+
+            for (int size = 1; size <= upToSize; size *= 10) {
                 for (Method filler : fillers) {
 
                     if (filler.getName().equals(fillerName)) {
@@ -128,6 +134,7 @@ public class TableReflectionSortsFiller {
                             return;
                         }
                     }
+
                 }
 
                 abSorts.reverseSort(ar);
@@ -137,18 +144,18 @@ public class TableReflectionSortsFiller {
 
                 start++;
             }
-            start=2;
+            start = 2;
         }
 
     }
 
-    private static void setNumOfElements(Sheet sheet, int upTo){
+    private static void setNumOfElements(Sheet sheet, int upTo) {
 
         int cellBegin = 2;
 
         Row rowName = sheet.createRow(1);
 
-        for (int i = 1; i <= upTo; i*=10){
+        for (int i = 1; i <= upTo; i *= 10) {
             Cell cellName = rowName.createCell(cellBegin);
             cellName.setCellValue(i);
             cellBegin++;
@@ -159,7 +166,7 @@ public class TableReflectionSortsFiller {
     public static int getNumUpToCount() {
 
         int count = 2;
-        for (int i = 1; i < upToSize; i*=10) {
+        for (int i = 1; i < upToSize; i *= 10) {
             count++;
         }
         return count;

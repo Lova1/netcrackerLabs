@@ -55,7 +55,7 @@ public class BubbleSort extends AbstractBubbleSorter {
      */
 
     @Override
-    public synchronized void sort(int[] inputArray) {
+    public void sort(int[] inputArray) {
 
         if (inputArray.length != 0) {
 
@@ -129,7 +129,7 @@ public class BubbleSort extends AbstractBubbleSorter {
      */
 
     @Override
-    public synchronized void reverseSort(int[] inputArray) {
+    public void reverseSort(int[] inputArray) {
 
         if (inputArray.length != 0) {
 

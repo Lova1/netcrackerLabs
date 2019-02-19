@@ -32,9 +32,9 @@ public class LineChartReflection {
     public static void createChart() throws IOException {
         try (XSSFWorkbook wb = new XSSFWorkbook()) {
 
-            for (Method methods: reflection.getFillersAnnotatedMethods()) {
+            for (Method methods : reflection.getFillersAnnotatedMethods()) {
                 XSSFSheet sheetSort = wb.createSheet("Fillers." + methods.getName());
-                TableReflectionSortsFiller.createTable(sheetSort,methods.getName());
+                TableReflectionSortsFiller.createTable(sheetSort, methods.getName());
                 createGraphics(sheetSort);
             }
 
@@ -74,7 +74,7 @@ public class LineChartReflection {
 
         int aListSize = aList.size();
 
-        for (int i=0; i<aListSize; i++) {
+        for (int i = 0; i < aListSize; i++) {
             for (AbstractSorter abstractSorter : aList) {
                 if (aStringList.get(i).equals(abstractSorter.getClass().getSimpleName())) {
 
@@ -95,7 +95,7 @@ public class LineChartReflection {
 
         int abListSize = abList.size();
 
-        for (int i=0; i<abListSize; i++) {
+        for (int i = 0; i < abListSize; i++) {
             for (AbstractBubbleSorter abstractBubbleSorter : abList) {
                 if (abStringList.get(i).equals(abstractBubbleSorter.getClass().getSimpleName())) {
 

@@ -13,7 +13,6 @@ public abstract class AbstractMerge extends AbstractSorter implements Time {
 
     private int[] subArray;
 
-    private int from = 0;
     private int to;
     private int availableProcessors = Runtime.getRuntime().availableProcessors();
 
@@ -142,6 +141,7 @@ public abstract class AbstractMerge extends AbstractSorter implements Time {
     private Queue<int[]> getSubArrayParts(int[] inputArray){
 
         Queue<int[]> arrayParts = new LinkedList<>();
+        int from = 0;
 
         for (int iter = 1; iter <= availableProcessors; iter++) {
 

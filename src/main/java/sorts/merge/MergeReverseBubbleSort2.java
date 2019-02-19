@@ -10,7 +10,7 @@ public class MergeReverseBubbleSort2 extends AbstractMerge {
     public void sort(int[] inputArray) {
 
         BubbleSort bubbleSort = new BubbleSort();
-        merge(inputArray,bubbleSort);
+        merge(inputArray,(AbstractBubbleSorter)bubbleSort);
 
     }
 }
